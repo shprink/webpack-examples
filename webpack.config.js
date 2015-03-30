@@ -24,6 +24,9 @@ module.exports = {
             test: /\.scss$/,
             loader: "css-loader!sass-loader"
         }, {
+            test: /\.less$/,
+            loader: "css-loader!less-loader"
+        }, {
             test: /\.(png|jpg|gif)$/,
             loader: "url-loader?limit=5000&name=img/img-[hash:6].[ext]"
         }]
