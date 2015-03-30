@@ -29,6 +29,12 @@ module.exports = {
         }, {
             test: /\.(png|jpg|gif)$/,
             loader: "url-loader?limit=5000&name=img/img-[hash:6].[ext]"
+        }, {
+            test: /\.html$/,
+            loader: "html-loader"
+        }, {
+            test: require.resolve("lodash"),
+            loader: 'expose?_'
         }]
     }
 };
