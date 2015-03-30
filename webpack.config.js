@@ -19,10 +19,13 @@ module.exports = {
             loader: "coffee-loader"
         }, {
             test: /\.css$/,
-            loader: "css-loader"
+            loader: "css-loader!autoprefixer-loader"
         }, {
             test: /\.scss$/,
             loader: "css-loader!sass-loader"
+        }, {
+            test: /\.(png|jpg|gif)$/,
+            loader: "file-loader?name=img/img-[hash:6].[ext]"
         }]
     }
 };
