@@ -25,7 +25,7 @@ module.exports = {
             loader: "css-loader!sass-loader"
         }, {
             test: /\.(png|jpg|gif)$/,
-            loader: "file-loader?name=img/img-[hash:6].[ext]"
+            loader: "url-loader?limit=5000&name=img/img-[hash:6].[ext]"
         }]
     }
 };
